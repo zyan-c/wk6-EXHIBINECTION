@@ -67,14 +67,14 @@ $colors: (
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:             #630834;  //#00cc99; // $blue !default;
-$primary-light:       #E31277; //新增
-$primary-transparent: #190014CC; //新增
-$secondary:           #EFEFEF; //$gray-600 !default;
-$text-primary:        #707070; //新增
-$text-dark:           #373A3C; //新增
-$black:               #000000; //新增
-$white:               #FFFFFF; //新增
+$primary:             #630834  !default; //#00cc99; // $blue !default;
+$primary-light:       #E31277  !default;//新增
+$primary-transparent: #190014CC !default;//新增
+$secondary:           #EFEFEF !default;//$gray-600 !default;
+$text-primary:        #707070 !default; //新增
+$text-dark:           #373A3C !default; //新增
+$black:               #000000 !default; //新增
+$white:               #FFFFFF !default; //新增
 $success:             $green !default;
 $info:                $cyan !default;
 $warning:             $yellow !default;
@@ -364,7 +364,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           1.875 !default; //1.5rem !default;
 $grid-row-columns:            6 !default;
 
 $gutters: $spacers !default;
@@ -453,6 +453,7 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default; //new
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 

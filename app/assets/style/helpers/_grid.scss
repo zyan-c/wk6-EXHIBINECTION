@@ -1,0 +1,13 @@
+//要先新增@mixin才可以呼叫 @pad 和 @mobile！
+
+// .container{
+//     max-width: 1140px;
+//     margin: 0 auto;
+//     padding: 0 15px;
+//     @include pad{
+//         max-width: 992px;
+//     }
+//     @include mobile{
+//         max-width: 767px;
+//     }
+// }

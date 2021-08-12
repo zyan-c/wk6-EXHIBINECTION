@@ -1,14 +1,23 @@
 // header
 .header{
+    // 為什麼這裏設定 lh 0px就有用，.header-title設定 lh 0px 就沒有用？
+    // .h1-test{
+    //     line-height: 0px;
+    // }
     &-title{
         font-size: 24px;
         color: $primary;
-        text-decoration: none;
     }
     &-link{
         font-size: 16px;
         color: $text-primary;
-        text-decoration: none;
-        padding-right: 32px;
+    }
+    &-link-cart{
+        color: $black;
+    }
+    &-small-text{
+        font-size: 12px;
+        background-color: $primary-light;
+        color: $white;
     }
 }

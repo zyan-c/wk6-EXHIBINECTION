@@ -1,7 +1,12 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "./helpers/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-
-
-@import './layout/index.scss';
+//全域宣告&reset
+@import './helpers/base';
+//container斷點設定
+@import './helpers/grid'; //待確認裡面container設定是否會影響到BS的斷點設定？
+//字體大小的class設定
+@import './helpers/fontsize';
+//pages
+@import './layout/index';
 @import'./layout/layout';

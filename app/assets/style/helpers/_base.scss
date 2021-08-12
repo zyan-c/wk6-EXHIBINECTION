@@ -1,0 +1,24 @@
+* , *:befor , *:after  {
+	box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+ul, ol, li{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}

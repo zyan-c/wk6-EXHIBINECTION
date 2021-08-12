@@ -18,22 +18,41 @@
   <body>
     <header class="header container-fluid">
       <div class="container">
-        <div class="d-flex position-relative py-9">
+        <div class="py-9 d-flex position-relative">
           <h1 class="position-absolute top-50 start-50 translate-middle"><a href="./index.html" class="header-title">EXHIBINECTION</a></h1>
           <ul class="position-absolute top-50 end-0 translate-middle-y list-unstyled d-flex mb-0">
-            <li><a href="#" class="header-link">Sign in</a></li>
-            <li><a href="" class="header-link">Sign up</a></li>
+            <li class="d-none d-md-block"><a href="#" class="header-link px-5">Sign in</a></li>
+            <li class="d-none d-md-block"><a href="" class="header-link px-5">Sign up</a></li>
             <li>
-              <a href="#" class="header-link"><span class="material-icons">confirmation_number</span></a>
+              <a href="#" class="header-link-cart ps-5 position-relative d-flex">
+                <span class="material-icons">confirmation_number</span>
+                <span class="header-small-text position-absolute top-0 start-100 translate-middle badge rounded-circle">3</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </header>
 
-    <%- contents %>
-
+    <main>
+      <%- contents %>
+    </main>
     
+    <footer class="footer container-fluid">
+      <div class="container">
+        <div class="row d-flex py-9">
+          <div class="col-12 col-lg-6 d-lg-flex align-items-center">
+            <!-- 暫時以h4（24px）代替，因為還沒有設定 fz， -->
+            <h4 class="pe-5">EXHIBINECTION</h4>
+            <small>© 2020. All Rights Reserved.</small>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block d-lg-flex justify-content-end">
+            <a href="#" class="header-link">Sign in</a>
+            <a href="#" class="header-link ms-8">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>

@@ -1,0 +1,35 @@
+.hero{
+    // 為什麼url('../../images/hero-bg-img.jpeg');無效？
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/ricardo-gomez-angel-UrOZTfXT0h0-unsplash%20(1).jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 480px;
+    color: $white;
+}
+.nav-scroller{
+    border-bottom: 1px solid #000;
+    // overflow-y: hidden;
+}
+.nav{
+    display: flex;        //讓li並排，且no-wrap不斷行，才可以overflow-x
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;  //字體不斷行
+}
+.nav-link{
+    color: $text-primary;
+}
+.show-description{
+    width: 85%;
+}
+// 待新增斷點 mixin！
+// .show-description{
+//     width: 100%;
+//     @include pad{
+//         width: 85%;
+//     }
+// }
+.show-bg{
+    background-color: $secondary;
+}
