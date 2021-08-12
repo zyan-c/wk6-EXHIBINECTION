@@ -18,22 +18,113 @@
   <body>
     <header class="header container-fluid">
       <div class="container">
-        <div class="d-flex position-relative py-9">
+        <div class="py-9 d-flex position-relative">
           <h1 class="position-absolute top-50 start-50 translate-middle"><a href="./index.html" class="header-title">EXHIBINECTION</a></h1>
           <ul class="position-absolute top-50 end-0 translate-middle-y list-unstyled d-flex mb-0">
-            <li><a href="#" class="header-link">Sign in</a></li>
-            <li><a href="" class="header-link">Sign up</a></li>
+            <li class="d-none d-md-block"><a href="#" class="header-link px-5">Sign in</a></li>
+            <li class="d-none d-md-block"><a href="" class="header-link px-5">Sign up</a></li>
             <li>
-              <a href="#" class="header-link"><span class="material-icons">confirmation_number</span></a>
+              <a href="#" class="header-link-cart ps-5 position-relative d-flex">
+                <span class="material-icons">confirmation_number</span>
+                <span class="header-small-text position-absolute top-0 start-100 translate-middle badge rounded-circle">3</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </header>
 
-    
+    <main>
+      <!-- <section class="hero container-fluid">
+    超重要，flex-column 一定要加 h-100，container 才會撐起來外層的 hero 高度！！
+    <div class="container d-flex flex-column justify-content-center h-100">
+        <h1 class="fz-8 mb-2">台北當代藝術展</h1>
+        <h2 class="fz-5 mb-5">01 JUN - 31 OCT</h2>
+        <div class="d-flex">
+            <div class="btn btn-primary-light me-2">購買票券</div>
+            <div class="btn btn-outline-white">詳細資訊</div>
+        </div>
+    </div>
+</section> -->
 
+<section class="hero container-fluid d-flex justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center h-100">
+            <div class="col12 offset-md-2 d-flex flex-column justify-content-center h-100">
+                <h1 class="fz-8 mb-2">台北當代藝術展</h1>
+                <h2 class="fz-5 mb-5">01 JUN - 31 OCT</h2>
+                <div class="d-flex">
+                    <div class="btn btn-primary-light me-2">購買票券</div>
+                    <div class="btn btn-outline-white">詳細資訊</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="nav-scroller container-fluid py-4 mb-7 mb-md-13">
+    <div class="container">
+        <ul class="nav d-flex justify-content-center">
+            <li><a href="#" class="pe-6 nav-link">音樂</a></li>
+            <li><a href="#" class="pe-6 nav-link">戲劇</a></li>
+            <li><a href="#" class="pe-6 nav-link">設計</a></li>
+            <li><a href="#" class="pe-6 nav-link">藝術</a></li>
+            <li><a href="#" class="pe-6 nav-link">美食</a></li>
+            <li><a href="#" class="pe-6 nav-link">旅遊</a></li>
+            <li><a href="#" class="pe-6 nav-link">電影</a></li>
+            <li><a href="#" class="pe-6 nav-link">親子</a></li>
+            <li><a href="#" class="pe-6 nav-link">期間設定</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="show">
+    <div class="container">
+        <h2 class="mb-2 mb-md-8 fz-8 fw-bold">熱門特展</h2>
+        <div class="row d-flex show-bg">
+            <div class="col-12 col-md-4">
+                <img class="h-100 object-fit" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/alina-grubnyak-R84Oy89aNKs-unsplash.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-7 pt-2 px-5 pb-8 pt-md-12 pb-md-12 ps-md-8 d-flex flex-column justify-content-between">
+                <div class="show-content">
+                    <div class="d-flex d-md-block justify-content-between mb-1">
+                        <h3 class="fz-5 fw-bold mb-md-1 d-flex">2020 台味設計展
+                            <a href="#" class="d-md-none ms-2"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/facebook-24px.svg" alt=""></a>
+                        </h3>
+                        <p class="d-md-none">01 JUN | 31 OCT</p>
+                    </div>
+                    <p class="fz-5 mb-2">$350</p>
+                    <P class="show-description fz-4 fz-md-5 fw-medium mb-8">一年一度的台味設計展由經濟部工業局主辦、台灣創意設計中心執行，每年，針對在地生活、文化及產業發展特色，運用設計思考詮釋新時代的意涵，並以展覽呈現在地設計。</P>
+                </div>
+                <div class="show-btn">
+                    <div class="btn btn-primary me-2"><a href="#" class="text-white">購買票券</a></div>
+                    <div class="btn btn-outline-primary"><a href="#">收藏展覽</a></div>
+                </div>
+            </div>
+            <div class="d-none d-md-flex col-md-1 pt-12 pb-12 flex-column justify-content-between">
+                <p class="fw-bold">01<br>JUN<br>|<br>31<br>OCT</p>
+                <a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/facebook-24px.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
     
+    <footer class="footer container-fluid">
+      <div class="container">
+        <div class="row d-flex py-9">
+          <div class="col-12 col-lg-6 d-lg-flex align-items-center">
+            <!-- 暫時以h4（24px）代替，因為還沒有設定 fz， -->
+            <h4 class="pe-5">EXHIBINECTION</h4>
+            <small>© 2020. All Rights Reserved.</small>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block d-lg-flex justify-content-end">
+            <a href="#" class="header-link">Sign in</a>
+            <a href="#" class="header-link ms-8">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
