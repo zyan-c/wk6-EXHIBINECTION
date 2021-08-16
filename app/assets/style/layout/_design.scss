@@ -17,15 +17,13 @@
     padding-bottom: 52px;
     // 無效？
     @include mobile{
-        padding-top: 44px;
-        padding-bottom: 44px;
+        padding: 44px 0;
     } 
 }
 .design-banner-light{
     padding-top: 80px;
     padding-bottom: 52px;
     @include mobile{
-        padding-top: 44px;
-        padding-bottom: 44px;
+        padding: 44px 0;
     } 
 }
