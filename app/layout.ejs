@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- all.scss -->
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
@@ -19,7 +22,9 @@
     <header class="header container-fluid">
       <div class="container">
         <div class="py-9 d-flex position-relative">
-          <h1 class="position-absolute top-50 start-50 translate-middle"><a href="./index.html" class="header-title">EXHIBINECTION</a></h1>
+          <h1 class="position-absolute top-50 start-50 translate-middle">
+            <a href="./index.html" class="header-title">EXHIBINECTION</a>
+          </h1>
           <ul class="position-absolute top-50 end-0 translate-middle-y list-unstyled d-flex mb-0">
             <li class="d-none d-md-block"><a href="#" class="header-link px-5">Sign in</a></li>
             <li class="d-none d-md-block"><a href="" class="header-link px-5">Sign up</a></li>
@@ -37,8 +42,49 @@
     <main>
       <%- contents %>
     </main>
+
+    <section class="swiper pb-13 pt-13">
+      <div class="container">
+        <h2 class="mb-2 mb-md-8 fz-8 fw-bold">猜你也喜歡...</h2>
+        <div class="row g-0">
+          <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide col-12 col-md-4 offset-md-1">
+                <img class="mb-1 swiper-img" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/ricardo-gomez-angel-WxpnuLzqZN4-unsplash.jpg" alt="">
+                <h5 class="fz-5 fw-bold mb-1">No.22 線上設計展</h5>
+                <p>$350</p>
+              </div>
+              <div class="swiper-slide col-12 col-md-4">
+                <img class="mb-1 swiper-img" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/petri-heiskanen-bR9gFJqAnzA-unsplash.jpg" alt="">
+                <h5 class="fz-5 fw-bold mb-1">No.22 線上設計展</h5>
+                <p>$350</p>
+              </div>
+              <div class="swiper-slide col-12 col-md-3">
+                <img class="mb-1 swiper-img" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/museums-victoria-kiDwVL_5ZBY-unsplash%20(1).jpg" alt="">
+                <h5 class="fz-5 fw-bold mb-1">No.22 線上設計展</h5>
+                <p>$350</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
-    <footer class="footer container-fluid">
+    <section class="subscribe text-white position-relative">
+      <div class="container">
+        <div class="position-absolute bottom-0 subscribe-content">
+          <!-- 如何設定 .lh-base -->
+          <h1 class="fz-8 mb-7 lh-base">想收到最新消息嗎？<br>快訂閱我們！</h1>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="輸入您的電子信箱" aria-label="input user email" aria-describedby="input user email">
+            <!-- 不要在 btn 亂加 px-12 拉，快快研究@@-->
+            <div class="btn btn-primary-light input-group-text px-12">訂閱</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer container-fluid d-flex align-items-end">
       <div class="container">
         <div class="row d-flex py-9">
           <div class="col-12 col-lg-6 d-lg-flex align-items-center">
@@ -54,6 +100,7 @@
       </div>
     </footer>
 
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

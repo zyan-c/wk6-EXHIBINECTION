@@ -33,3 +33,19 @@
 .show-bg{
     background-color: $secondary;
 }
+.streaming-bg{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/people2.png');
+    background-position: center center;
+    background-size: cover;
+}
+.purple-bg{
+    background-color: $primary-transparent;
+}
+// .streaming-span{
+//     height: 42px;
+//     width: 1px;
+//     background-color: $white;
+// }
+.streaming-title{
+    border-right: 1px solid $white;
+}

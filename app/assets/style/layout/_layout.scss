@@ -1,9 +1,6 @@
 // header
 .header{
-    // 為什麼這裏設定 lh 0px就有用，.header-title設定 lh 0px 就沒有用？
-    // .h1-test{
-    //     line-height: 0px;
-    // }
+    border: 1px solid $text-primary;
     &-title{
         font-size: 24px;
         color: $primary;
@@ -19,5 +16,26 @@
         font-size: 12px;
         background-color: $primary-light;
         color: $white;
+    }
+}
+// swiper
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+.swiper-img{
+    height: 350px;
+    width: 350px;
+}
+//  訂閱我們
+.subscribe{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/wladislaw-peljuchno-Y_f1aHpR1tc-unsplash.jpg');
+    background-position: center center;
+    background-size: cover;
+    // padding-bottom: 36px;
+    height: 400px;
+    &-content{
+        //pos：a之後只能用margin推
+        margin-bottom: 36px;
     }
 }

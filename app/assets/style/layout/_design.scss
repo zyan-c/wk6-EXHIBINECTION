@@ -1,0 +1,31 @@
+.nav-scroller{
+    // overflow-y: hidden;
+}
+.nav{
+    display: flex;        //讓li並排，且no-wrap不斷行，才可以overflow-x
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;  //字體不斷行
+}
+.nav-link{
+    color: $text-primary;
+}
+// design-banner
+.design-banner{
+    background-color: $primary;
+    padding-top: 80px;
+    padding-bottom: 52px;
+    // 無效？
+    @include mobile{
+        padding-top: 44px;
+        padding-bottom: 44px;
+    } 
+}
+.design-banner-light{
+    padding-top: 80px;
+    padding-bottom: 52px;
+    @include mobile{
+        padding-top: 44px;
+        padding-bottom: 44px;
+    } 
+}

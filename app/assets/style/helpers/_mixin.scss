@@ -1,0 +1,18 @@
+//sm以下
+@mixin mobile(){
+    @media(min-width: 576px){
+        @content
+    }
+};
+//md以上
+@mixin pad(){
+    @media(min-width: 768px){
+        @content
+    }
+};
+//lg以上
+@mixin pc(){
+    @media(min-width: 992px){
+        @content
+    }
+};
