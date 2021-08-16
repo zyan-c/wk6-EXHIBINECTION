@@ -40,34 +40,7 @@
     </header>
 
     <main>
-      <!-- <section class="hero container-fluid">
-    超重要，flex-column 一定要加 h-100，container 才會撐起來外層的 hero 高度！！
-    <div class="container d-flex flex-column justify-content-center h-100">
-        <h1 class="fz-8 mb-2">台北當代藝術展</h1>
-        <h2 class="fz-5 mb-5">01 JUN - 31 OCT</h2>
-        <div class="d-flex">
-            <div class="btn btn-primary-light me-2">購買票券</div>
-            <div class="btn btn-outline-white">詳細資訊</div>
-        </div>
-    </div>
-</section> -->
-
-<section class="hero container-fluid d-flex justify-content-center">
-    <div class="container">
-        <div class="row justify-content-center h-100">
-            <div class="col-12 col-md-11 offset-md-1 d-flex flex-column justify-content-center h-100">
-                <h1 class="fz-8 mb-2">台北當代藝術展</h1>
-                <h2 class="fz-5 mb-5">01 JUN - 31 OCT</h2>
-                <div class="d-flex">
-                    <div class="btn col-6 col-md-2 btn-primary-light me-2">購買票券</div>
-                    <div class="btn col-6 col-md-2 btn-outline-white">詳細資訊</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="nav-scroller container-fluid py-4 mb-7 mb-md-13">
+      <section class="nav-scroller container-fluid py-4 d-none d-md-block">
     <div class="container">
         <ul class="nav d-flex justify-content-flex-start justify-content-md-center">
             <li><a href="#" class="pe-6 nav-link">音樂</a></li>
@@ -83,56 +56,57 @@
     </div>
 </section>
 
-<section class="show mb-13">
+<section class="design-banner text-white">
     <div class="container">
-        <h2 class="mb-2 mb-md-8 fz-8 fw-bold">熱門特展</h2>
-        <div class="row d-flex show-bg pt-8 px-4 pt-md-0 px-md-0 g-0">
-            <div class="col-12 col-md-4">
-                <img class="h-100 object-fit" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/alina-grubnyak-R84Oy89aNKs-unsplash.jpg" alt="">
-            </div>
-            <div class="col-12 col-md-7 pt-2 pb-8 pt-md-12 pb-md-12 ps-md-8 d-flex flex-column justify-content-between">
-                <div class="show-content">
-                    <div class="d-flex d-md-block justify-content-between mb-1">
-                        <!-- h3 改 h5，直播回顧那邊才用h3 -->
-                        <h5 class="fz-5 fw-bold mb-md-1 d-flex">2020 台味設計展
-                            <a href="#" class="d-md-none ms-2"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/facebook-24px.svg" alt=""></a>
-                        </h5>
-                        <p class="d-md-none">01 JUN | 31 OCT</p>
-                    </div>
-                    <p class="fz-5 mb-2">$350</p>
-                    <P class="show-description fz-4 fz-md-5 fw-medium mb-8">一年一度的台味設計展由經濟部工業局主辦、台灣創意設計中心執行，每年，針對在地生活、文化及產業發展特色，運用設計思考詮釋新時代的意涵，並以展覽呈現在地設計。</P>
-                </div>
-                <div class="show-btn">
-                    <div class="btn btn-primary me-2"><a href="#" class="text-white">購買票券</a></div>
-                    <div class="btn btn-outline-primary"><a href="#">收藏展覽</a></div>
-                </div>
-            </div>
-            <div class="d-none d-md-flex col-md-1 pt-12 pb-12 flex-column justify-content-between">
-                <p class="fw-bold">01<br>JUN<br>|<br>31<br>OCT</p>
-                <a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/facebook-24px.svg" alt=""></a>
-            </div>
-        </div>
+        <ul class="row">
+            <li class="col-12 col-md-4 order-3 order-md-0">
+                <h2 class="fz-8 mb-2 mb-md-8">2020 台味設計展</h2>
+                <p>一年一度的台味設計展由經濟部工業局主辦、台灣創意設計中心執行，每年，針對在地生活、文化及產業發展特色，運用設計思考詮釋新時代的意涵，並以展覽呈現在地設計。</p>
+            </li>
+            <li class="col-12 col-md-5">
+                <img class="mb-5 mb-md-0" src="./assets/images/show-1.jpeg" alt="">
+            </li>
+            <li class="col-12 col-md-1 flex-md-column align-self-md-end">
+                <p class="fz-5 fw-md-bold mb-2 mb-md-0 writing-mode">01 JUN | 31 OCT</p>
+            </li>
+        </ul>
     </div>
 </section>
 
-<section class="streaming mb-13">
+<section class="design-banner-light text-primary">
     <div class="container">
-        <h2 class="mb-2 mb-md-8 fz-8 fw-bold">直播回顧</h2>
-        <div class="row streaming-bg g-0">
-            <div class="col-12 col-md-5 purple-bg text-white py-12 px-8">
-                <div class="d-flex flex-grow-1 mb-11 ">
-                    <h3 class="streaming-title fz-7 pe-3">開幕對談</h3>
-                    <h3 class="fz-7 fw-medium ms-3">藝術展演巡禮</h3>
-                </div>
-                <img class="mb-3" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/people.png" alt="">
-                <h5 class="fz-5 mb-2 fw-normal">臺北現代聯合總監｜Ken Hsu</h5>
-                <!-- 待處理 fw-light -->
-                <p class="fz-5 mb-5 fw-light">獨家由藝術家、策展人、畫廊總監帶您欣賞台北藝術特展，感受雕塑、展演及當代日常文化之間微妙的關係。</p>
-                <div class="btn btn-primary-light">點此觀看</div>
-            </div>
-        </div>
+        <ul class="row">
+            <li class="col-12 col-md-4 offset-md-2 order-3 order-md-0">
+                <h2 class="fz-8 mb-2 mb-md-8">No.22 線上設計展</h2>
+                <p>這是一個專屬於設計系畢業生的展覽，沒有華麗的名號、沒有浮誇的獎賞。讓我們用作品與理念，去碰撞真實世界裡的各種問題，創造更多美好的人事物。讓這個地球、這個世界變成每一個人心目中的理想鄉。</p>
+            </li>
+            <li class="col-12 col-md-5">
+                <img class="mb-5 mb-md-0" src="./assets/images/show-2.jpeg" alt="">
+            </li>
+            <li class="col-12 col-md-1 flex-md-column align-self-md-end">
+                <p class="fz-5 fw-md-bold mb-2 mb-md-0">01 JUN | 31 OCT</p>
+            </li>
+        </ul>
     </div>
 </section>
+
+<section class="design-banner text-white">
+    <div class="container">
+        <ul class="row">
+            <li class="col-12 col-md-4 order-3 order-md-0">
+                <h2 class="fz-8 mb-2 mb-md-8">高雄設計節</h2>
+                <p>設計大高雄究竟是怎麼一回事？在這「設計」詞彙有點氾濫的年代，或許我們也搞不清楚究竟誰被誰設計了，設計生活？還是被生活設計？而當高雄這座城市建設硬體已相當程度完備時，文化軟實力又該如何輸出？</p>
+            </li>
+            <li class="col-12 col-md-5">
+                <img class="mb-5 mb-md-0" src="./assets/images/show-3.jpeg" alt="">
+            </li>
+            <li class="col-12 col-md-1 flex-md-column align-self-md-end">
+                <p class="fz-5 fw-md-bold mb-2 mb-md-0">01 JUN | 31 OCT</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
     </main>
 
     <section class="swiper pb-13 pt-13">
