@@ -10218,6 +10218,10 @@ fieldset:disabled .btn {
   line-height: 1 !important;
 }
 
+.lh-0 {
+  line-height: 0 !important;
+}
+
 .lh-sm {
   line-height: 1.25 !important;
 }
@@ -16497,39 +16501,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
 }
 
-.timeline-section {
-  position: relative;
+.cartCard {
+  height: 84px;
+  overflow: hidden;
 }
 
-.timeline-section::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #E31277;
-}
-
-.timeline-pointer {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.timeline-pointer::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background-color: #E31277;
-  border-radius: 50%;
-  -webkit-transform: translate(0, -25%);
-      -ms-transform: translate(0, -25%);
-          transform: translate(0, -25%);
+.cartAside-check {
+  height: calc(100vh - 96px);
 }
 
 /*# sourceMappingURL=all.css.map */
