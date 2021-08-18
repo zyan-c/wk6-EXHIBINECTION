@@ -1,0 +1,33 @@
+.detial-content{
+    // 為什麼不能用../../images/show-1.jpeg？
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/alina-grubnyak-R84Oy89aNKs-unsplash.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 256px;
+}
+.ticket-box{
+    height: 256px;
+    @include media-breakpoint-down(sm) {
+        height: auto;
+    }
+}
+.divider{
+    height: 256px;
+    width: 1px;
+    background-color: $black;
+    margin-right: -1px;
+}
+.detail-box{
+    height: 400px;
+    // 待補手機版斷點，試試看自己設定height成200
+    @include media-breakpoint-down(sm) {
+        height: 200px;
+    }
+}
+.detail-box2{
+    height: 559px;
+    // 待補手機版斷點，試試看自己設定height成359
+    @include media-breakpoint-down(sm) {
+        height: 359px;
+    }
+}

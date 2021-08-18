@@ -1,0 +1,32 @@
+.progressBar{
+    border-top: 1px solid $primary-light;
+    li{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: $white;
+            border: 1px solid $primary-light;
+            margin-top: -4px;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+    }
+    .progressBar-done{
+        &::before{
+            content: "";
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: $primary-light;
+            border: 1px solid $primary-light;
+            margin-top: -4px;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+    }
+}
