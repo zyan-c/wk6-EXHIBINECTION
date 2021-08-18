@@ -1,36 +1,8 @@
-.timeline-section{
-    position: relative;
+.cartCard{
+    height: 84px;
+    overflow: hidden;
 }
-// 為什麼線條是after不是before啊？
-.timeline-section::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: $primary-light;
+.cartAside-check{
+    height: calc(100vh - 96px); //減掉header56px+mb40px
+    // margin-bottom: 40px;
 }
-.timeline-pointer{
-    position: relative;
-    // 為什麼要設定 d：f？
-    display: flex;
-    justify-content: center;
-}
-.timeline-pointer::before{
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: $primary-light;
-    border-radius: 50%;
-    // 還是不懂為什麼要加left50%
-    // left: 50%;
-    transform: translate(0,-25%);
-}
-// .checkout-list{
-//     position: relative;
-// }
-// .checkout-list-img{
-//     position: absolute;
-//     left: 0;
-// }
