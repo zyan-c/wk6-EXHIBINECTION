@@ -8,6 +8,7 @@
     <title>Boostrap Index</title>
     <!-- material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,70 +20,133 @@
   </head>
 
   <body>
-    <header class="header container-fluid">
-      <div class="container">
-        <div class="py-9 d-flex position-relative">
-          <h1 class="position-absolute top-50 start-50 translate-middle">
-            <a href="./index.html" class="header-title">EXHIBINECTION</a>
-          </h1>
-          <ul class="position-absolute top-50 end-0 translate-middle-y list-unstyled d-flex mb-0">
-            <li class="d-none d-md-block"><a href="#" class="header-link px-5">Sign in</a></li>
-            <li class="d-none d-md-block"><a href="" class="header-link px-5">Sign up</a></li>
-            <li>
-              <a href="#" class="header-link-cart ps-5 position-relative d-flex" data-bs-toggle="modal" data-bs-target="#cartFixedModal">
-                <span class="material-icons">confirmation_number</span>
-                <span class="header-small-text position-absolute top-0 start-100 translate-middle badge rounded-circle">3</span>
-              </a>
-              <!-- cart fixed modal -->
-              <div class="modal cart text-white" id="cartFixedModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content p-11">
-                    <div class="cart-title modal-header p-0 mb-3">
-                      <h5 class="modal-title fz-8">Cart List</h5>
-                    </div>
-                    <div class="modal-body p-0">
-                      <!-- BS card -->
-                      <div class="card pt-md-9 pb-md-8 px-md-11 position-relative" style="max-width: 540px;">
-                        <button type="button" class="btn-close position-absolute top-0 start-0" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="row g-0 align-items-center">
-                          <div class="col-md-4">
-                            <img class="h-100" src="./assets/images/show-1.jpeg" alt="">
-                          </div>
-                          <div class="col-md-6">
-                            <div class="card-body p-0 ps-5 d-flex flex-wrap justify-content-between">
-                              <h5 class="card-title mb-1 fz-4 fw-bold w-100">2020 台味設計展</h5>
-                              <p class="card-text mb-1 fz-4 fw-medium w-100">01 JUN — 31 OCT</p>
-                              <small class="text-muted w-100">全票</small>
-                              <p class="fz-5 fw-bold w-100 mt-4">$350</p>
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <ul class="d-flex align-items-center">
-                              <li><a class="text-black fz-6" href="">-</a></li>
-                              <li class="fw-bold fz-5 mx-auto">01</li>
-                              <li><a class="text-black fz-6" href="">+</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- BS card end -->
-                    </div>
-                    <div class="cart-footer d-flex justify-content-between align-items-center mt-9">
-                        <div class="d-flex">
-                          <p class="fz-5 fw-medium me-8">小計</p>
-                          <p class="fz-5 fw-medium">NT$1050</p>
-                        </div>
-                        <button type="button" class="btn btn-white">前往結帳</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- cart fixed modal end -->
-            </li>
-          </ul>
+    <!-- 為什麼要有 navbar-light bg-light 的 class？ -->
+    <nav class="navbar navbar-expand-lg py-7 py-lg-9 border-bottom">
+      <div class="container-fluid">
+        <!-- 漢堡選單 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#signIn" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-icons">menu</span>
+        </button>
+        <!-- logo -->
+        <h1 class="position-lg-absolute top-50 start-50 translate-lg-middle"><a class="navbar-brand text-primary fz-5-half fz-lg-6 fw-regular" href="./index.html">EXHIBINECTION</a></h1>
+        <!-- 折疊 -->
+        <div class="d-flex">
+          <div class="collapse navbar-collapse" id="signIn">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link px-5" href="#">Sign in</a>
+              </li>
+              <li class="nav-item px-5">
+                <a class="nav-link" href="#">Sign up</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 票卷 -->
+          <a href="#" class="text-black position-relative d-flex ps-2" data-bs-toggle="modal" data-bs-target="#cartFixedModal">
+            <span class="material-icons">confirmation_number</span>
+            <span class="bg-primary-light fz-3 text-white position-absolute top-0 start-100 translate-middle badge rounded-circle">3</span>
+          </a>
         </div>
       </div>
-    </header>
+    </nav>
+
+    <!-- cart fixed modal -->
+    <div class="modal cart" id="cartFixedModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <!-- 為什麼在 modal-content 加入 h-100 就會變成vh100？ -->
+        <div class="modal-content h-100 pt-7 px-4 pb-9 p-md-11">
+          <div class="cart-title modal-header p-0 mb-3 text-white">
+            <h5 class="modal-title fz-8">Cart List</h5>
+          </div>
+          <div class="modal-body p-0">
+            <!-- BS card1 -->
+            <div class="card pt-9 pb-8 px-11 position-relative mb-2 mb-md-3" style="max-width: 540px;">
+              <button type="button" class="btn-close position-absolute top-0 start-0" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="row g-0 align-items-center d-flex">
+                <!-- 如何在不寫死高度的情況下讓 img 的高度填滿 col-md-4？ -->
+                <div class="col-md-4">
+                  <img class="cart-img" src="./assets/images/show-1.jpeg" alt="">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body p-0 ps-5 d-flex flex-wrap justify-content-between">
+                    <h5 class="card-title mb-1 fz-4 fw-bold w-100">2020 台味設計展</h5>
+                    <p class="card-text mb-1 fz-4 fw-medium w-100">01 JUN — 31 OCT</p>
+                    <small class="text-muted w-100">全票</small>
+                    <p class="fz-5 fw-bold w-100 mt-4">$350</p>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <ul class="d-flex align-items-center">
+                    <li><a class="text-black fz-6" href="">-</a></li>
+                    <li class="fw-bold fz-5 mx-auto">01</li>
+                    <li><a class="text-black fz-6" href="">+</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- BS card1 end -->
+            <!-- BS card2 -->
+            <div class="card pt-md-9 pb-md-8 px-md-11 position-relative mb-2 mb-md-3" style="max-width: 540px;">
+              <button type="button" class="btn-close position-absolute top-0 start-0" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="row g-0 align-items-center">
+                <div class="col-md-4">
+                  <img class="cart-img" src="./assets/images/show-2.jpeg" alt="">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body p-0 ps-5 d-flex flex-wrap justify-content-between">
+                    <h5 class="card-title mb-1 fz-4 fw-bold w-100">2020 台味設計展</h5>
+                    <p class="card-text mb-1 fz-4 fw-medium w-100">01 JUN — 31 OCT</p>
+                    <small class="text-muted w-100">全票</small>
+                    <p class="fz-5 fw-bold w-100 mt-4">$350</p>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <ul class="d-flex align-items-center">
+                    <li><a class="text-black fz-6" href="">-</a></li>
+                    <li class="fw-bold fz-5 mx-auto">01</li>
+                    <li><a class="text-black fz-6" href="">+</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- BS card2 end -->
+            <!-- BS card3 -->
+            <div class="card pt-md-9 pb-md-8 px-md-11 position-relative mb-2 mb-md-3" style="max-width: 540px;">
+              <button type="button" class="btn-close position-absolute top-0 start-0" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="row g-0 align-items-center">
+                <div class="col-md-4">
+                  <img class="cart-img" src="./assets/images/show-3.jpeg" alt="">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body p-0 ps-5 d-flex flex-wrap justify-content-between">
+                    <h5 class="card-title mb-1 fz-4 fw-bold w-100">2020 台味設計展</h5>
+                    <p class="card-text mb-1 fz-4 fw-medium w-100">01 JUN — 31 OCT</p>
+                    <small class="text-muted w-100">全票</small>
+                    <p class="fz-5 fw-bold w-100 mt-4">$350</p>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <ul class="d-flex align-items-center">
+                    <li><a class="text-black fz-6" href="">-</a></li>
+                    <li class="fw-bold fz-5 mx-auto">01</li>
+                    <li><a class="text-black fz-6" href="">+</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- BS card3 end -->
+          </div>
+          <div class="cart-footer d-flex justify-content-between align-items-center mt-9 text-white">
+              <div class="d-flex">
+                <p class="fz-5 fw-medium me-8">小計</p>
+                <p class="fz-5 fw-medium">NT$1050</p>
+              </div>
+              <a href="./confirmation.html" type="button" class="btn btn-white text-black">前往結帳</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cart fixed modal end -->
 
     <main>
       <section>
@@ -106,31 +170,34 @@
                 </ul>
                 <ul>
                     <!-- md版以上的 cart-list -->
-                    <li class="row g-0 cartCard mb-7 d-none d-md-block">
+                    <li class="row g-0 cartCard mb-7 d-none d-md-block d-md-flex">
                         <div class="col-md-3">
-                            <img src="./assets/images/show-1.jpeg" alt="show-1" height="84px">
+                            <img src="./assets/images/show-1.jpeg" alt="show-img">
                         </div>
-                        <div class="col-md-9 pt-md-1">
+                        <div class="col-md-9 mt-lg-1">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex flex-column ms-3 ms-md-10">
+                                <div class="d-flex flex-column ms-3 ms-md-4 ms-lg-10">
                                     <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
-                                    <P class="fw-bold mb-1">01 JUN — 31 OCT</P>
-                                    <P class="text-muted mb-1">全票</P>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 fw-lg-bold mb-1">01 JUN — 31 OCT</p>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 text-muted mb-1">全票</p>
                                 </div>
-                                <p class="fz-5 fw-bold">NT$350</p>
-                                <div class="d-flex align-items-center">
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">remove</span></a>
-                                    <p class="fz-5 fw-bold mx-3">01</p>
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">add</span></a>
+                                <p class="fz-md-4 fw-md-medium mb-md-2 fz-lg-5 fw-lg-bold">NT$350</p>
+                                <div class="d-flex align-items-center mb-md-2">
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">remove</span></a>
+                                    <p class="fz-md-4 fw-md-medium fz-lg-5 fw-lg-bold mx-3">01</p>
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">add</span></a>
                                 </div>
-                                <a href="#" class="btn-close text-black" data-bs-dismiss="modal" aria-label="Close"></a>
+                                <!-- 如何控制 a 的大小？還是要換成 btn？先暫用 material icon -->
+                                <a href="#" class="text-black mb-md-1" data-bs-dismiss="modal" aria-label="Close">
+                                    <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                                </a>
                             </div>
                         </div>
                     </li>
                     <!-- md版以下的 cart-list -->
                     <li class="row g-0 cartCard mb-7 d-md-none">
                         <div class="col-6 col-md-none pe-5">
-                            <img src="./assets/images/show-1.jpeg" alt="show-1">
+                            <img src="./assets/images/show-1.jpeg" alt="show-img">
                         </div>
                         <div class="col-6 col-md-none position-relative">
                             <p class="fz-4 fw-bold mb-1">2020 台味設計展</p>
@@ -143,63 +210,112 @@
                                 </div>
                                 <p class="fz-5 fw-bold">$350</p>
                             </div>
-                            <a href="#" class="btn-close text-black position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></a>
+                            <a href="#" class="text-black position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close">
+                                <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                            </a>
                         </div>
                     </li>
-                    <!-- 待刪 -->
-                    <li class="row g-0 cartCard mb-7">
-                        <!-- 為什麼設定 img height 84px 無效？ -->
-                        <div class="col-6 col-md-3">
-                            <img src="./assets/images/show-2.jpeg" alt="show-1" height="84px">
+                    <!-- md版以上的 cart-list-2 -->
+                    <li class="row g-0 cartCard mb-7 d-none d-md-block d-md-flex">
+                        <div class="col-md-3">
+                            <img src="./assets/images/show-2.jpeg" alt="show-img">
                         </div>
-                        <div class="col-6 col-md-9 pt-1">
+                        <div class="col-md-9 mt-lg-1">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex flex-column ms-10">
+                                <div class="d-flex flex-column ms-3 ms-md-4 ms-lg-10">
                                     <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
-                                    <P class="fw-bold mb-1">01 JUN — 31 OCT</P>
-                                    <P class="text-muted mb-1">全票</P>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 fw-lg-bold mb-1">01 JUN — 31 OCT</p>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 text-muted mb-1">全票</p>
                                 </div>
-                                <p class="fz-5 fw-bold">NT$350</p>
-                                <div class="d-flex align-items-center">
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">remove</span></a>
-                                    <p class="fz-5 fw-bold mx-3">01</p>
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">add</span></a>
+                                <p class="fz-md-4 fw-md-medium mb-md-2 fz-lg-5 fw-lg-bold">NT$350</p>
+                                <div class="d-flex align-items-center mb-md-2">
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">remove</span></a>
+                                    <p class="fz-md-4 fw-md-medium fz-lg-5 fw-lg-bold mx-3">01</p>
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">add</span></a>
                                 </div>
-                                <a href="#" class="btn-close text-black" data-bs-dismiss="modal" aria-label="Close"></a>
+                                <!-- 如何控制 a 的大小？還是要換成 btn？先暫用 material icon -->
+                                <a href="#" class="text-black mb-md-1" data-bs-dismiss="modal" aria-label="Close">
+                                    <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                                </a>
                             </div>
                         </div>
                     </li>
-                    <li class="row g-0 cartCard mb-7">
-                        <!-- 為什麼設定 img height 84px 無效？ -->
-                        <div class="col-6 col-md-3">
-                            <img src="./assets/images/show-3.jpeg" alt="show-1" height="84px">
+                    <!-- md版以下的 cart-list-2 -->
+                    <li class="row g-0 cartCard mb-7 d-md-none">
+                        <div class="col-6 col-md-none pe-5">
+                            <img src="./assets/images/show-2.jpeg" alt="show-img">
                         </div>
-                        <div class="col-6 col-md-9 pt-1">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex flex-column ms-10">
-                                    <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
-                                    <P class="fw-bold mb-1">01 JUN — 31 OCT</P>
-                                    <P class="text-muted mb-1">全票</P>
-                                </div>
-                                <p class="fz-5 fw-bold">NT$350</p>
+                        <div class="col-6 col-md-none position-relative">
+                            <p class="fz-4 fw-bold mb-1">2020 台味設計展</p>
+                            <p class="fz-4 fw-medium">01 JUN — 31 OCT</p>
+                            <!-- 全票，數字，價格 -->
+                            <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">remove</span></a>
-                                    <p class="fz-5 fw-bold mx-3">01</p>
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">add</span></a>
+                                    <p class="text-muted me-1">全票</p>
+                                    <div class="btn fz-5 fw-bold p-0">1</div>
                                 </div>
-                                <a href="#" class="btn-close text-black" data-bs-dismiss="modal" aria-label="Close"></a>
+                                <p class="fz-5 fw-bold">$350</p>
                             </div>
+                            <a href="#" class="text-black position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close">
+                                <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                            </a>
+                        </div>
+                    </li>
+                    <!-- md版以上的 cart-list-3 -->
+                    <li class="row g-0 cartCard mb-7 d-none d-md-block d-md-flex">
+                        <div class="col-md-3">
+                            <img src="./assets/images/show-3.jpeg" alt="show-img">
+                        </div>
+                        <div class="col-md-9 mt-lg-1">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column ms-3 ms-md-4 ms-lg-10">
+                                    <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 fw-lg-bold mb-1">01 JUN — 31 OCT</p>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 text-muted mb-1">全票</p>
+                                </div>
+                                <p class="fz-md-4 fw-md-medium mb-md-2 fz-lg-5 fw-lg-bold">NT$350</p>
+                                <div class="d-flex align-items-center mb-md-2">
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">remove</span></a>
+                                    <p class="fz-md-4 fw-md-medium fz-lg-5 fw-lg-bold mx-3">01</p>
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">add</span></a>
+                                </div>
+                                <!-- 如何控制 a 的大小？還是要換成 btn？先暫用 material icon -->
+                                <a href="#" class="text-black mb-md-1" data-bs-dismiss="modal" aria-label="Close">
+                                    <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- md版以下的 cart-list-3 -->
+                    <li class="row g-0 cartCard mb-7 d-md-none">
+                        <div class="col-6 col-md-none pe-5">
+                            <img src="./assets/images/show-3.jpeg" alt="show-img">
+                        </div>
+                        <div class="col-6 col-md-none position-relative">
+                            <p class="fz-4 fw-bold mb-1">2020 台味設計展</p>
+                            <p class="fz-4 fw-medium">01 JUN — 31 OCT</p>
+                            <!-- 全票，數字，價格 -->
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <p class="text-muted me-1">全票</p>
+                                    <div class="btn fz-5 fw-bold p-0">1</div>
+                                </div>
+                                <p class="fz-5 fw-bold">$350</p>
+                            </div>
+                            <a href="#" class="text-black position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close">
+                                <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                            </a>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="col-6 offset-6 col-md-4 offset-md-0">
-                <div class="cartAside-check d-flex flex-column justify-content-end">
+                <div class="cartAside-check d-flex flex-column mt-15 mt-md-0 justify-content-md-end">
                     <div class="d-flex w-100 justify-content-between mb-3">
                         <p class="fz-5 fw-medium">小計</p>
                         <p class="fz-5 fw-medium">NT$1050</p>
                     </div>
-                    <div class="btn btn-primary-light w-100">下一步</div>
+                    <a href="./info.html" class="btn btn-primary-light w-100">下一步</a>
                 </div>
             </div>
         </div>
@@ -207,7 +323,8 @@
 </section>
     </main>
 
-    <section class="swiper pt-8 pb-8 pb-md-13 pt-md-13">
+    <!-- 猜你也喜歡 & swiper -->
+    <section class="swiper pt-8 pb-8 pb-md-13 pt-md-13 d-none">
       <div class="container">
         <h2 class="mb-2 mb-md-8 fz-8 fw-bold">猜你也喜歡...</h2>
         <div class="row g-0">
@@ -234,7 +351,8 @@
       </div>
     </section>
     
-    <section class="subscribe text-white position-relative">
+    <!-- 訂閱 -->
+    <section class="subscribe text-white position-relative d-none">
       <div class="container">
         <div class="position-absolute bottom-0 subscribe-content">
           <!-- 如何設定 .lh-base -->
@@ -248,7 +366,8 @@
       </div>
     </section>
 
-    <footer class="footer container-fluid d-flex align-items-end">
+    <!-- footer -->
+    <footer class="footer container-fluid d-flex align-items-end d-none">
       <div class="container">
         <div class="row d-flex py-9">
           <div class="col-12 col-lg-6 d-lg-flex align-items-center">

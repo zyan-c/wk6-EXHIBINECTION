@@ -149,95 +149,148 @@
     <!-- cart fixed modal end -->
 
     <main>
-      <!-- <section class="hero container-fluid">
-    超重要，flex-column 一定要加 h-100，container 才會撐起來外層的 hero 高度！！
-    <div class="container d-flex flex-column justify-content-center h-100">
-        <h1 class="fz-8 mb-2">台北當代藝術展</h1>
-        <h2 class="fz-5 mb-5">01 JUN - 31 OCT</h2>
-        <div class="d-flex">
-            <div class="btn btn-primary-light me-2">購買票券</div>
-            <div class="btn btn-outline-white">詳細資訊</div>
-        </div>
-    </div>
-</section> -->
-
-<section class="hero container-fluid d-flex justify-content-center">
+      <section class="pt-7 pb-12">
     <div class="container">
-        <div class="row justify-content-center h-100">
-            <div class="col-12 col-md-11 offset-md-1 d-flex flex-column justify-content-center h-100">
-                <h1 class="fz-8 mb-2">台北當代藝術展</h1>
-                <h2 class="fz-5 mb-5">01 JUN - 31 OCT</h2>
-                <div class="d-flex">
-                    <div class="btn col-6 col-md-2 btn-primary-light me-2">購買票券</div>
-                    <div class="btn col-6 col-md-2 btn-outline-white">詳細資訊</div>
-                </div>
+        <!-- 進度條 -->
+        <div class="row mb-7 mb-md-9">
+            <div class="col-12 col-md-8">
+                <ul class="progressBar d-flex justify-content-around pb-9">
+                    <li class="progressBar-done">
+                        <p class="mt-1 fw-bold">確認訂單</p>
+                    </li>
+                    <li class="progressBar-done">
+                        <p class="mt-1">填寫訂購資訊</p>
+                    </li>
+                    <li>
+                        <p class="mt-1">填寫付款資訊</p>
+                    </li>
+                    <li>
+                        <p class="mt-1">完成訂購</p>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="nav-scroller container-fluid py-4 mb-7 mb-md-13">
-    <div class="container">
-        <ul class="nav d-flex justify-content-flex-start justify-content-md-center">
-            <li><a href="#" class="pe-6 nav-link">音樂</a></li>
-            <li><a href="#" class="pe-6 nav-link">戲劇</a></li>
-            <li><a href="./design.html" class="pe-6 nav-link">設計</a></li>
-            <li><a href="#" class="pe-6 nav-link">藝術</a></li>
-            <li><a href="#" class="pe-6 nav-link">美食</a></li>
-            <li><a href="#" class="pe-6 nav-link">旅遊</a></li>
-            <li><a href="#" class="pe-6 nav-link">電影</a></li>
-            <li><a href="#" class="pe-6 nav-link">親子</a></li>
-            <li><a href="#" class="pe-6 nav-link">期間設定</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="show mb-13">
-    <div class="container">
-        <h2 class="mb-2 mb-md-8 fz-8 fw-bold">熱門特展</h2>
-        <div class="row d-flex show-bg pt-8 px-4 pt-md-0 px-md-0 g-0">
-            <div class="col-12 col-md-4">
-                <img class="h-100 object-fit" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/alina-grubnyak-R84Oy89aNKs-unsplash.jpg" alt="">
-            </div>
-            <div class="col-12 col-md-7 pt-2 pb-8 pt-md-12 pb-md-12 ps-md-8 d-flex flex-column justify-content-between">
-                <div class="show-content">
-                    <div class="d-flex d-md-block justify-content-between mb-1">
-                        <!-- h3 改 h5，直播回顧那邊才用h3 -->
-                        <h5 class="fz-5 fw-bold mb-md-1 d-flex">2020 台味設計展
-                            <a href="#" class="d-md-none ms-2"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/facebook-24px.svg" alt=""></a>
-                        </h5>
-                        <p class="d-md-none">01 JUN | 31 OCT</p>
+        <!-- 訂購資訊+卡片 -->
+        <div class="row mb-8 mb-md-3 flex-wrap-reverse">
+            <!-- 卡片 -->
+            <ul class="col-12 col-md-8 checkoutList">
+                <li class="checkoutList-card align-items-center mb-7">
+                    <img src="./assets/images/show-1.jpeg" alt="" class="checkoutList-img">
+                    <div class="checkoutList-content d-lg-flex align-items-lg-center mt-lg-1">
+                        <div class="d-flex flex-column">
+                            <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
+                            <p class="fw-medium mb-1">01 JUN — 31 OCT</p>
+                            <p class="d-none d-lg-block text-muted">全票</p>
+                        </div>
+                        <!-- 手機版隱藏：價格&數量 -->
+                        <div class="d-none d-lg-flex">
+                            <p class="fz-5 fw-bold ms-10">NT$350</p>
+                            <h3 class="fz-5 fw-bold ms-14 lh-base">1</h3>
+                        </div>
+                        <!-- 手機版顯示：價格&數量  -->
+                        <div class="d-flex d-lg-none justify-content-between align-items-center">
+                            <div class="d-flex">
+                                <p class="text-muted">全票</p>
+                                <h3 class="fz-5 fw-bold">1</h3>
+                            </div>
+                            <p class="fz-5 fw-bold ms-10">NT$350</p>
+                        </div>
                     </div>
-                    <p class="fz-5 mb-2">$350</p>
-                    <P class="show-description fz-4 fz-md-5 fw-medium mb-8">一年一度的台味設計展由經濟部工業局主辦、台灣創意設計中心執行，每年，針對在地生活、文化及產業發展特色，運用設計思考詮釋新時代的意涵，並以展覽呈現在地設計。</P>
+                </li>
+                <li class="checkoutList-card align-items-center mb-7">
+                    <img src="./assets/images/show-2.jpeg" alt="" class="checkoutList-img me-4 me-md-10">
+                    <div class="checkoutList-content d-lg-flex align-items-lg-center">
+                        <div class="d-flex flex-column">
+                            <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
+                            <p class="fw-medium mb-1">01 JUN — 31 OCT</p>
+                            <p class="d-none d-lg-block text-muted">全票</p>
+                        </div>
+                        <!-- 手機版隱藏：價格&數量 -->
+                        <div class="d-none d-lg-flex">
+                            <p class="fz-5 fw-bold ms-10">NT$350</p>
+                            <h3 class="fz-5 fw-bold ms-14 lh-base">1</h3>
+                        </div>
+                        <!-- 手機版顯示：價格&數量  -->
+                        <div class="d-flex d-lg-none justify-content-between align-items-center">
+                            <div class="d-flex">
+                                <p class="text-muted">全票</p>
+                                <h3 class="fz-5 fw-bold">1</h3>
+                            </div>
+                            <p class="fz-5 fw-bold ms-10">NT$350</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="checkoutList-card align-items-center">
+                    <img src="./assets/images/show-3.jpeg" alt="" class="checkoutList-img me-4 me-md-10">
+                    <div class="checkoutList-content d-lg-flex align-items-lg-center">
+                        <div class="d-flex flex-column">
+                            <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
+                            <p class="fw-medium mb-1">01 JUN — 31 OCT</p>
+                            <p class="d-none d-lg-block text-muted">全票</p>
+                        </div>
+                        <!-- 手機版隱藏：價格&數量 -->
+                        <div class="d-none d-lg-flex">
+                            <p class="fz-5 fw-bold ms-10">NT$350</p>
+                            <h3 class="fz-5 fw-bold ms-14 lh-base">1</h3>
+                        </div>
+                        <!-- 手機版顯示：價格&數量  -->
+                        <div class="d-flex d-lg-none justify-content-between align-items-center">
+                            <div class="d-flex">
+                                <p class="text-muted">全票</p>
+                                <h3 class="fz-5 fw-bold">1</h3>
+                            </div>
+                            <p class="fz-5 fw-bold ms-10">NT$350</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- 訂購資訊 -->
+            <div class="col-12 col-md-4">
+                <h2 class="fz-5 fw-bold mb-5 mb-md-7">訂購人資訊</h2>
+                <form class="mb-12">
+                    <div class="mb-7">
+                        <label for="userEmail" class="form-label mb-1 d-block">Email</label>
+                        <input type="text" id="userEmail" name="email" placeholder="example@gmail.com" class="form-controll w-100" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-7">
+                        <label for="userName" class="form-label mb-1 d-block">姓名</label>
+                        <input type="text" id="userName" name="name" placeholder="請輸入姓名" class="form-controll w-100" aria-describedby="inputName">
+                    </div>
+                    <div class="mb-7">
+                        <label for="userTel" class="form-label mb-1 d-block">聯絡電話</label>
+                        <input type="tel" id="userTel" name="tel" placeholder="請輸入電話" class="form-controll w-100" aria-describedby="inputTel">
+                    </div>
+                    <div class="mb-7 d-flex flex-column">
+                        <label for="coupun" class="form-label mb-1 d-block">優惠碼</label>
+                        <input type="text" id="coupun" name="coupun" placeholder="TG87526" class="form-controll w-100" aria-describedby="coupunHelp">
+                        <div id="coupunHelp" class="form-text align-self-end text-primary">優惠碼已生效</div>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-between w-100">
+                    <p class="fw-medium">小計</p>
+                    <p class="fw-light">NT$1050</p>
                 </div>
-                <div class="show-btn">
-                    <div class="btn btn-primary me-2"><a href="#" class="text-white">購買票券</a></div>
-                    <div class="btn btn-outline-primary"><a href="#">收藏展覽</a></div>
+                <div class="d-flex justify-content-between w-100">
+                    <p class="fw-medium">折扣</p>
+                    <p class="fw-light">-NT$50</p>
                 </div>
-            </div>
-            <div class="d-none d-md-flex col-md-1 pt-12 pb-12 flex-column justify-content-between">
-                <p class="fw-bold">01<br>JUN<br>|<br>31<br>OCT</p>
-                <a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/facebook-24px.svg" alt=""></a>
+                <div class="d-flex justify-content-between w-100 mb-8 mb-lg-3">
+                    <p class="fz-5 fw-bold">總金額</p>
+                    <p class="fz-5 fw-medium">NT$1000</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="streaming mb-13">
-    <div class="container">
-        <h2 class="mb-2 mb-md-8 fz-8 fw-bold">直播回顧</h2>
-        <div class="row streaming-bg g-0">
-            <div class="col-12 col-md-5 purple-bg text-white py-12 px-8">
-                <div class="d-flex flex-grow-1 mb-11 ">
-                    <h3 class="streaming-title fz-7 pe-3">開幕對談</h3>
-                    <h3 class="fz-7 fw-medium ms-3">藝術展演巡禮</h3>
+        <!-- 按鈕 -->
+        <div class="row">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <div class="col-6 col-md-2">
+                        <a href="./confirmation.html" class="btn btn-outline-primary w-100">返回</a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a href="./payment.html" class="btn btn-primary-light w-100">下一步</a>
+                    </div>
                 </div>
-                <img class="mb-3" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/people.png" alt="">
-                <h5 class="fz-5 mb-2 fw-normal">臺北現代聯合總監｜Ken Hsu</h5>
-                <!-- 待處理 fw-light -->
-                <p class="fz-5 mb-5 fw-light">獨家由藝術家、策展人、畫廊總監帶您欣賞台北藝術特展，感受雕塑、展演及當代日常文化之間微妙的關係。</p>
-                <div class="btn btn-primary-light">點此觀看</div>
             </div>
         </div>
     </div>
@@ -245,7 +298,7 @@
     </main>
 
     <!-- 猜你也喜歡 & swiper -->
-    <section class="swiper pt-8 pb-8 pb-md-13 pt-md-13 ">
+    <section class="swiper pt-8 pb-8 pb-md-13 pt-md-13 d-none">
       <div class="container">
         <h2 class="mb-2 mb-md-8 fz-8 fw-bold">猜你也喜歡...</h2>
         <div class="row g-0">
@@ -273,7 +326,7 @@
     </section>
     
     <!-- 訂閱 -->
-    <section class="subscribe text-white position-relative ">
+    <section class="subscribe text-white position-relative d-none">
       <div class="container">
         <div class="position-absolute bottom-0 subscribe-content">
           <!-- 如何設定 .lh-base -->
@@ -288,7 +341,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="footer container-fluid d-flex align-items-end ">
+    <footer class="footer container-fluid d-flex align-items-end d-none">
       <div class="container">
         <div class="row d-flex py-9">
           <div class="col-12 col-lg-6 d-lg-flex align-items-center">
