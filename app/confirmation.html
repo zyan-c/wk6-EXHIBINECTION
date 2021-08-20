@@ -3,6 +3,7 @@ title: Boostrap Index
 layout: ./app/layout.ejs
 engine: ejs
 current: confirmation
+display: d-none
 ---
 <section>
     <div class="container">
@@ -25,31 +26,34 @@ current: confirmation
                 </ul>
                 <ul>
                     <!-- md版以上的 cart-list -->
-                    <li class="row g-0 cartCard mb-7 d-none d-md-block">
+                    <li class="row g-0 cartCard mb-7 d-none d-md-block d-md-flex">
                         <div class="col-md-3">
-                            <img src="./assets/images/show-1.jpeg" alt="show-1" height="84px">
+                            <img src="./assets/images/show-1.jpeg" alt="show-img">
                         </div>
-                        <div class="col-md-9 pt-md-1">
+                        <div class="col-md-9 mt-lg-1">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex flex-column ms-3 ms-md-10">
+                                <div class="d-flex flex-column ms-3 ms-md-4 ms-lg-10">
                                     <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
-                                    <P class="fw-bold mb-1">01 JUN — 31 OCT</P>
-                                    <P class="text-muted mb-1">全票</P>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 fw-lg-bold mb-1">01 JUN — 31 OCT</p>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 text-muted mb-1">全票</p>
                                 </div>
-                                <p class="fz-5 fw-bold">NT$350</p>
-                                <div class="d-flex align-items-center">
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">remove</span></a>
-                                    <p class="fz-5 fw-bold mx-3">01</p>
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">add</span></a>
+                                <p class="fz-md-4 fw-md-medium mb-md-2 fz-lg-5 fw-lg-bold">NT$350</p>
+                                <div class="d-flex align-items-center mb-md-2">
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">remove</span></a>
+                                    <p class="fz-md-4 fw-md-medium fz-lg-5 fw-lg-bold mx-3">01</p>
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">add</span></a>
                                 </div>
-                                <a href="#" class="btn-close text-black" data-bs-dismiss="modal" aria-label="Close"></a>
+                                <!-- 如何控制 a 的大小？還是要換成 btn？先暫用 material icon -->
+                                <a href="#" class="text-black mb-md-1" data-bs-dismiss="modal" aria-label="Close">
+                                    <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                                </a>
                             </div>
                         </div>
                     </li>
                     <!-- md版以下的 cart-list -->
                     <li class="row g-0 cartCard mb-7 d-md-none">
                         <div class="col-6 col-md-none pe-5">
-                            <img src="./assets/images/show-1.jpeg" alt="show-1">
+                            <img src="./assets/images/show-1.jpeg" alt="show-img">
                         </div>
                         <div class="col-6 col-md-none position-relative">
                             <p class="fz-4 fw-bold mb-1">2020 台味設計展</p>
@@ -62,63 +66,112 @@ current: confirmation
                                 </div>
                                 <p class="fz-5 fw-bold">$350</p>
                             </div>
-                            <a href="#" class="btn-close text-black position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></a>
+                            <a href="#" class="text-black position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close">
+                                <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                            </a>
                         </div>
                     </li>
-                    <!-- 待刪 -->
-                    <li class="row g-0 cartCard mb-7">
-                        <!-- 為什麼設定 img height 84px 無效？ -->
-                        <div class="col-6 col-md-3">
-                            <img src="./assets/images/show-2.jpeg" alt="show-1" height="84px">
+                    <!-- md版以上的 cart-list-2 -->
+                    <li class="row g-0 cartCard mb-7 d-none d-md-block d-md-flex">
+                        <div class="col-md-3">
+                            <img src="./assets/images/show-2.jpeg" alt="show-img">
                         </div>
-                        <div class="col-6 col-md-9 pt-1">
+                        <div class="col-md-9 mt-lg-1">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex flex-column ms-10">
+                                <div class="d-flex flex-column ms-3 ms-md-4 ms-lg-10">
                                     <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
-                                    <P class="fw-bold mb-1">01 JUN — 31 OCT</P>
-                                    <P class="text-muted mb-1">全票</P>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 fw-lg-bold mb-1">01 JUN — 31 OCT</p>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 text-muted mb-1">全票</p>
                                 </div>
-                                <p class="fz-5 fw-bold">NT$350</p>
-                                <div class="d-flex align-items-center">
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">remove</span></a>
-                                    <p class="fz-5 fw-bold mx-3">01</p>
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">add</span></a>
+                                <p class="fz-md-4 fw-md-medium mb-md-2 fz-lg-5 fw-lg-bold">NT$350</p>
+                                <div class="d-flex align-items-center mb-md-2">
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">remove</span></a>
+                                    <p class="fz-md-4 fw-md-medium fz-lg-5 fw-lg-bold mx-3">01</p>
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">add</span></a>
                                 </div>
-                                <a href="#" class="btn-close text-black" data-bs-dismiss="modal" aria-label="Close"></a>
+                                <!-- 如何控制 a 的大小？還是要換成 btn？先暫用 material icon -->
+                                <a href="#" class="text-black mb-md-1" data-bs-dismiss="modal" aria-label="Close">
+                                    <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                                </a>
                             </div>
                         </div>
                     </li>
-                    <li class="row g-0 cartCard mb-7">
-                        <!-- 為什麼設定 img height 84px 無效？ -->
-                        <div class="col-6 col-md-3">
-                            <img src="./assets/images/show-3.jpeg" alt="show-1" height="84px">
+                    <!-- md版以下的 cart-list-2 -->
+                    <li class="row g-0 cartCard mb-7 d-md-none">
+                        <div class="col-6 col-md-none pe-5">
+                            <img src="./assets/images/show-2.jpeg" alt="show-img">
                         </div>
-                        <div class="col-6 col-md-9 pt-1">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex flex-column ms-10">
-                                    <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
-                                    <P class="fw-bold mb-1">01 JUN — 31 OCT</P>
-                                    <P class="text-muted mb-1">全票</P>
-                                </div>
-                                <p class="fz-5 fw-bold">NT$350</p>
+                        <div class="col-6 col-md-none position-relative">
+                            <p class="fz-4 fw-bold mb-1">2020 台味設計展</p>
+                            <p class="fz-4 fw-medium">01 JUN — 31 OCT</p>
+                            <!-- 全票，數字，價格 -->
+                            <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">remove</span></a>
-                                    <p class="fz-5 fw-bold mx-3">01</p>
-                                    <a href="#" class="text-black"><span class="material-icons lh-base">add</span></a>
+                                    <p class="text-muted me-1">全票</p>
+                                    <div class="btn fz-5 fw-bold p-0">1</div>
                                 </div>
-                                <a href="#" class="btn-close text-black" data-bs-dismiss="modal" aria-label="Close"></a>
+                                <p class="fz-5 fw-bold">$350</p>
                             </div>
+                            <a href="#" class="text-black position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close">
+                                <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                            </a>
+                        </div>
+                    </li>
+                    <!-- md版以上的 cart-list-3 -->
+                    <li class="row g-0 cartCard mb-7 d-none d-md-block d-md-flex">
+                        <div class="col-md-3">
+                            <img src="./assets/images/show-3.jpeg" alt="show-img">
+                        </div>
+                        <div class="col-md-9 mt-lg-1">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column ms-3 ms-md-4 ms-lg-10">
+                                    <h5 class="fz-4 fw-bold mb-1">2020 台味設計展</h5>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 fw-lg-bold mb-1">01 JUN — 31 OCT</p>
+                                    <p class="fw-md-light fz-md-3-half fz-lg-4 text-muted mb-1">全票</p>
+                                </div>
+                                <p class="fz-md-4 fw-md-medium mb-md-2 fz-lg-5 fw-lg-bold">NT$350</p>
+                                <div class="d-flex align-items-center mb-md-2">
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">remove</span></a>
+                                    <p class="fz-md-4 fw-md-medium fz-lg-5 fw-lg-bold mx-3">01</p>
+                                    <a href="#" class="text-black"><span class="material-icons fz-md-4 fz-lg-5 lh-base">add</span></a>
+                                </div>
+                                <!-- 如何控制 a 的大小？還是要換成 btn？先暫用 material icon -->
+                                <a href="#" class="text-black mb-md-1" data-bs-dismiss="modal" aria-label="Close">
+                                    <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- md版以下的 cart-list-3 -->
+                    <li class="row g-0 cartCard mb-7 d-md-none">
+                        <div class="col-6 col-md-none pe-5">
+                            <img src="./assets/images/show-3.jpeg" alt="show-img">
+                        </div>
+                        <div class="col-6 col-md-none position-relative">
+                            <p class="fz-4 fw-bold mb-1">2020 台味設計展</p>
+                            <p class="fz-4 fw-medium">01 JUN — 31 OCT</p>
+                            <!-- 全票，數字，價格 -->
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <p class="text-muted me-1">全票</p>
+                                    <div class="btn fz-5 fw-bold p-0">1</div>
+                                </div>
+                                <p class="fz-5 fw-bold">$350</p>
+                            </div>
+                            <a href="#" class="text-black position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close">
+                                <span class="material-icons fz-md-4 fz-lg-5">close</span>
+                            </a>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="col-6 offset-6 col-md-4 offset-md-0">
-                <div class="cartAside-check d-flex flex-column justify-content-end">
+                <div class="cartAside-check d-flex flex-column mt-15 mt-md-0 justify-content-md-end">
                     <div class="d-flex w-100 justify-content-between mb-3">
                         <p class="fz-5 fw-medium">小計</p>
                         <p class="fz-5 fw-medium">NT$1050</p>
                     </div>
-                    <div class="btn btn-primary-light w-100">下一步</div>
+                    <a href="./info.html" class="btn btn-primary-light w-100">下一步</a>
                 </div>
             </div>
         </div>

@@ -5,4 +5,10 @@
 .cartAside-check{
     height: calc(100vh - 96px); //減掉header56px+mb40px
     // margin-bottom: 40px;
+    @include media-breakpoint-down(md) {
+        height: auto;
+    }
+    @include media-breakpoint-down(sm) {
+        height: auto;
+    }
 }

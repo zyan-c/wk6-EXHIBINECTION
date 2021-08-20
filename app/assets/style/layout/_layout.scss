@@ -1,21 +1,13 @@
-// header
-.header{
-    border: 1px solid $text-primary;
-    &-title{
-        font-size: 24px;
-        color: $primary;
+// 覆蓋 BS5 nav-link 的預設 padding
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0;
+}
+@include media-breakpoint-up(lg){
+    .position-lg-absolute{
+        position: absolute;
     }
-    &-link{
-        font-size: 16px;
-        color: $text-primary;
-    }
-    &-link-cart{
-        color: $black;
-    }
-    &-small-text{
-        font-size: 12px;
-        background-color: $primary-light;
-        color: $white;
+    .translate-lg-middle{
+        transform: translate(-50%, -50%);
     }
 }
 // swiper
@@ -40,13 +32,29 @@
     }
 }
 // cart fixed modal
-// .cart{
-//     background-color: $black;
-//     &-title{
-//         border-bottom: none;
-//     }
-//     &-footer{
-//         border-top: none;
-//     }
-// }
-
+.cart{
+    &-title{
+        border-bottom: none;
+    }
+    &-footer{
+        border-top: none;
+    }
+    &-img{
+        height: 120px;
+    }
+}
+.modal-content{
+    background-color: $black; 
+    overflow-y: auto;  //跟在 modal-dialog 加入 modal-dialog-scrollable 是一樣的嗎？
+    height: 100%; //跟在 modal.content 旁邊加入 h-100 是一樣的
+}
+.modal.cart .modal-dialog{
+    position: fixed;
+    top: 0;
+    right: 0;
+    // bottom: 0;
+    // width: 100%;
+    height: 100%; //加入後 modal 的底部才會碰到瀏覽器最下方
+    margin: 0; //加入後 modal 的上方才會碰到瀏覽器最上面
+    transform: translate3d(0%, 0, 0);
+}

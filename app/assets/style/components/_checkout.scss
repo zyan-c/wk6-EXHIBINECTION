@@ -1,0 +1,26 @@
+.checkoutList{
+    margin-bottom: 48px;
+    @include media-breakpoint-up(lg){
+        margin-bottom: auto;
+    }
+    &-card{
+        display: flex;
+        position: relative;
+        // @include media-breakpoint-down(sm){
+        //     flex-direction: column;
+        // }
+    }
+    &-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 160px;
+        height: 84px;
+    }
+    &-content{
+        margin-left: 190px; //圖片寬度160+gutter30
+        @include media-breakpoint-down(md){
+            margin-left: 175px; //圖片寬度160+gutter15
+        }
+    }
+}
