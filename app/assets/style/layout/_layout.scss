@@ -2,6 +2,7 @@
 .navbar-expand-lg .navbar-nav .nav-link{
     padding: 0;
 }
+// 8/19嘗試以下 code 失敗（要讓signin區塊出現在右側？）
 @include media-breakpoint-up(lg){
     .position-lg-absolute{
         position: absolute;
