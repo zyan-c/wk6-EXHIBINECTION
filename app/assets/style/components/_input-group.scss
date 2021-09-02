@@ -1,0 +1,7 @@
+// 覆蓋 BS5 的預設，讓 offcanvas .input-group 的 input.form-control 在手機版可以顯示，在md以上變成預設的1%
+.input-group > .form-control {
+    width: 100%;
+    @include media-breakpoint-up(md){
+        width: 1%;
+    }
+}

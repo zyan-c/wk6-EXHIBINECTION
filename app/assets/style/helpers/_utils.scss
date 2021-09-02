@@ -22,3 +22,31 @@
 .bg-primary-light{
     background-color: $primary-light;
 }
+
+.w-120{
+    width: 120px;
+}
+
+// test
+// 待研究！！！是否每個新專案都要 overwrite BS 的樣式？？？？
+.btn:hover{
+    background-color: $black;
+    color: $white;
+}
+
+// 清除 btn:focus, .form-control:focus 和 .navbar-toggler:focus 外框
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active, 
+.btn-primary:active:focus:not(:disabled):not(.disabled),
+.btn:focus, .btn:active, .btn:hover, .form-control:focus, .navbar-toggler:focus{
+    box-shadow: none!important;
+    outline: 0;
+}
+
+
+// 覆蓋 BS5 的預設，讓 offcanvas .input-group 的 input.form-control 在手機版可以顯示，在md以上變成預設的1%
+.input-group > .form-control {
+    width: 100%;
+    @include media-breakpoint-up(md){
+        width: 1%;
+    }
+}
