@@ -16354,16 +16354,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   outline: 0;
 }
 
-.input-group > .form-control {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .input-group > .form-control {
-    width: 1%;
-  }
-}
-
 .progressBar {
   border-top: 1px solid #E31277;
 }
